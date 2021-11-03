@@ -1,0 +1,17 @@
+.card-style {
+  background-color: rebeccapurple;
+  margin: 0 auto;
+  height: 195px;
+  width: 309px;
+  margin-top: 21px;
+  margin-left: 162px;
+  display: flex;
+  flex-direction: column;
+}
+.flex {
+  width: 1110px;
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  justify-content: center;
+}
