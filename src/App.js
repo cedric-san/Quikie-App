@@ -4,7 +4,7 @@ import Header from './Components/Header';
 import Home from '/Components/Home/Home';
 import View from './Components/View/View';
 import CardList from '/Components/Home/CardLists';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 export default function App() {
   return (
