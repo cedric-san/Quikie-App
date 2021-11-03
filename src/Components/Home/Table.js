@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Button from '../UI/Button';
+
 import './Table.css';
 const Table = () => {
   const array = [

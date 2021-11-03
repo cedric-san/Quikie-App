@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../Components/UI/Button';
+
 const View = () => {
   return (
     <div className="homepage">
@@ -37,7 +37,6 @@ const View = () => {
             <td>ong</td>
             <td>$ 124.00</td>
             <td>
-              <Button data="view" />
               <button className="btn btn-primary">Delete</button>
             </td>
             <td>$0.001</td>
