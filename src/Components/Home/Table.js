@@ -3,6 +3,9 @@ import './Table.css';
 const Table = () => {
   return (
     <div>
+      <h3>Stock Detail Table</h3>
+      <input type="text" placeholder="Search by Company Name" />
+
       <table className="table table-bordered table-style">
         <thead>
           <tr>
