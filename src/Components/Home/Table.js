@@ -1,6 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Table.css';
 const Table = () => {
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    setList(array);
+  }, []);
+  const array = [
+    {
+      name: 'sankar',
+      symbol: 'usd',
+      marketCap: '$123.0',
+      currentPrice: '$100.0',
+    },
+    {
+      name: 'sankar',
+      symbol: 'usd',
+      marketCap: '$123.0',
+      currentPrice: '$100.0',
+    },
+    {
+      name: 'sankar',
+      symbol: 'usd',
+      marketCap: '$123.0',
+      currentPrice: '$100.0',
+    },
+  ];
   return (
     <div>
       <h3>Stock Detail Table</h3>
@@ -17,51 +42,19 @@ const Table = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Sankar</td>
-            <td>ong</td>
-            <td>$ 124.00</td>
-            <td>
-              <button className="btn btn-primary">View</button>
-            </td>
-            <td>$0.001</td>
-          </tr>
-          <tr>
-            <td>Sankar</td>
-            <td>ong</td>
-            <td>$ 124.00</td>
-            <td>
-              <button className="btn btn-primary">View</button>
-            </td>
-            <td>$0.001</td>
-          </tr>
-          <tr>
-            <td>Sankar</td>
-            <td>ong</td>
-            <td>$ 124.00</td>
-            <td>
-              <button className="btn btn-primary">View</button>
-            </td>
-            <td>$0.001</td>
-          </tr>
-          <tr>
-            <td>Sankar</td>
-            <td>ong</td>
-            <td>$ 124.00</td>
-            <td>
-              <button className="btn btn-primary">View</button>
-            </td>
-            <td>$0.001</td>
-          </tr>
-          <tr>
-            <td>Sankar</td>
-            <td>ong</td>
-            <td>$ 124.00</td>
-            <td>
-              <button className="btn btn-primary">View</button>
-            </td>
-            <td>$0.001</td>
-          </tr>
+          {list.map((data) => {
+            return (
+              <tr>
+                <td>{data.name}</td>
+                <td>{data.symbol}</td>
+                <td>{data.marketCap}</td>
+                <td>
+                  <button className="btn btn-primary">View</button>
+                </td>
+                <td>{data.currentPrice}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
