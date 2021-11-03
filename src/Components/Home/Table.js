@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Table.css';
 const Table = () => {
-  const [list, setList] = useState([]);
-
-  useEffect(() => {
-    setList(array);
-  }, []);
   const array = [
     {
       name: 'sankar',
@@ -25,7 +20,31 @@ const Table = () => {
       marketCap: '$123.0',
       currentPrice: '$100.0',
     },
+    {
+      name: 'sankar',
+      symbol: 'usd',
+      marketCap: '$123.0',
+      currentPrice: '$100.0',
+    },
+    {
+      name: 'sankar',
+      symbol: 'usd',
+      marketCap: '$123.0',
+      currentPrice: '$100.0',
+    },
   ];
+  const [list, setList] = useState([]);
+  const [buttonStatus, setButtonStatus] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setList(array);
+    }, 3000);
+  }, [list]);
+  setTimeout(() => {
+    setButtonStatus(!buttonStatus);
+  }, 6000);
+
   return (
     <div>
       <h3>Stock Detail Table</h3>
@@ -49,7 +68,9 @@ const Table = () => {
                 <td>{data.symbol}</td>
                 <td>{data.marketCap}</td>
                 <td>
-                  <button className="btn btn-primary">View</button>
+                  <button className="btn btn-primary">
+                    {buttonStatus ? 'Save Data' : 'View'}
+                  </button>
                 </td>
                 <td>{data.currentPrice}</td>
               </tr>
